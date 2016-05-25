@@ -1,50 +1,45 @@
 <!doctype HTML>
 <meta charset="utf-8"/>
-<head>
-    <link rel="stylesheet" href="styles.css" type="text/css" />
-</head>
 <title>Десять типичных вопросов на собеседованиях на знание HTML</title>
     <!--Верхняя лента в меню-->
-    <aside>
-        <section><li><a href="https://tmfeed.ru/?utm_source=tm_habrahabr&utm_medium=tm_top_panel&utm_campaign=tm_promo">TM Feed</a>
-            <li><a>Хабрахабр</a>
+    <menu>
+        <li><a href="https://tmfeed.ru/?utm_source=tm_habrahabr&utm_medium=tm_top_panel&utm_campaign=tm_promo">TM Feed</a>
+        <li><a>Хабрахабр</a>
             <li><a href="https://tmfeed.ru/?utm_source=tm_habrahabr&utm_medium=tm_top_panel&utm_campaign=tm_promo">Geektimes</a>
             <li><a href="https://tmfeed.ru/?utm_source=tm_habrahabr&utm_medium=tm_top_panel&utm_campaign=tm_promo">Toster</a>
             <li><a href="https://tmfeed.ru/?utm_source=tm_habrahabr&utm_medium=tm_top_panel&utm_campaign=tm_promo">Мой Круг</a>
             <li><a href="https://tmfeed.ru/?utm_source=tm_habrahabr&utm_medium=tm_top_panel&utm_campaign=tm_promo">Мой Фрилансим</a>
-        </section>
-        <section>
             <li><a>Спецпроекты: </a>
             <li><a href="https://tmfeed.ru/?utm_source=tm_habrahabr&utm_medium=tm_top_panel&utm_campaign=tm_promo">Контент-маркетинг</a>
             <li><a href="https://tmfeed.ru/?utm_source=tm_habrahabr&utm_medium=tm_top_panel&utm_campaign=tm_promo">Создайте пеабрахабр</a> 
-        </section>
-    </aside>
+        
+    </menu>
     <!--Боковой хедер с навигацией-->
     <header>
     <a href="https://habrhabr.ru">
-        <img src="https://habracdn.net/habr/images/1463757608/logo.svg?r=2" alt="logo habra"></img>
+        <img src="https://habracdn.net/habr/images/1463757608/logo.svg?r=2" alt="logo habra">
     </a>    
     <a href="">
-        <img src="" alt="Meню"></img>
+        <img src="/1.png" alt="Meню">
     </a>
     <a>
-        <img src="" alt="Настройки"></img>
+        <img src="/1.png" alt="Настройки">
     </a>
         <nav>
             <h1>Разделы</h1>
-            <input type="search" placeholder="Поиск" name=""/>
-            <li><a href="">Публикации</a>
-            <li><a href="">Хабы</a>
-            <li><a href="">Компании</a>
-            <li><a href="">Пользователи</a>
-            <li><a href="">Песочница</a>
-            <h1></h1>
-            <li><a href="">QA</a>
-            <li><a href="">Вакансии</a>
+            <input type="search" placeholder="Поиск" name="searcharticle"/>
+            <a href="">Публикации</a>
+            <a href="">Хабы</a>
+            <a href="">Компании</a>
+            <a href="">Пользователи</a>
+            <a href="">Песочница</a>
+            
+            <a href="">QA</a>
+            <a href="">Вакансии</a>
             <h1>Cпецпроекты</h1>
-            <li><a href="">Соберите свой стартап</a>
-            <li><a href="">Линукс в Ажуре</a>
-            <li><a href="">Cоздай игру</a>
+            <a href="">Соберите свой стартап</a>
+            <a href="">Линукс в Ажуре</a>
+            <a href="">Cоздай игру</a>
         </nav>    
     </header>
     <main>
@@ -54,21 +49,170 @@
                 <img src="https://habracdn.net/habr/images/1463757608/logo.svg?r=2" alt="лицо автора">
                 <li><a href="">Имя чувака </a><a href="">@Никчувака</a>
                 <li>Имя фамилия
+                <meter value="4" max=100>Карма</meter>
             </figure>
+            <!--1. Переключалка инфы про автора-->
+            <ul>
+                <li><a href="/">Профиль</a>
+                <li><a href="/">Публикации</a>
+                <li><a href="/">Комментарии</a>
+                <li><a href="/">Избранное</a>
+            </ul>
         </article>
-        <!--1. Переключалка инфы про автора-->
+        <time datetime='2006-09-23'>3 декабря 2014 в 16:57</time>
+        <header>
+            <h1>
+                <a href='/'>Разработка </a> -> Десять типичных вопросов на собеседованиях на знание HTML
+            </h1>
+        </header>
         <!--2. хабы статьи-->
+        <ul rol>
+            <li><a href='/hub1'>Html</a>
+            <li><a href='/hub2'>Семантика</a>
+            <li><a href='/hub2'>Разработка веб-сайтов</a>
+        </ul>
         <!--3. Статья-->
+        <article>
+            <h1>
+                Валидация разметки
+            </h1>
+            Рассмотрим следующую разметку:<br>
+            <code>
+                function(){return 'hello world'}
+            </code>
+            <p>Атрибут alt является обязательным для тэга img, однако значение этого атрибута может быть пустым (т.е. alt=""). Имеет смысл оставлять значение атрибута пустым в случае, когда изображение используется только для декоративных целей и не является частью содержания страницы. Что касается доступности, если атрибут alt ничего не содержит, то экранные дикторы проигнорируют изображение. Оставлять атрибут пустым в данном случае крайне рекомендуется, ведь что-нибудь вроде «Разделитель содержимого» будет только раздражать тех, кто слушает экранного диктора.</p>
+        </article>
         <!--4. никто не читает теги-->
+        <section>
+            <a href='/'>tag 1</a>
+            <a href='/'>tag 3</a>
+            <a href='/'>tag 2</a>
+        </section>
         <!--5. рейтинг статьи просмотри фейворит-->
+        <section>
+            <button>upvote</button>
+            Рейтинг <meter value=32 max=100> 5</meter>
+            <button>DOWNvote</button>
+            Просмотры <span>14</span>
+            <BUTTON>FAV</BUTTON>Избранное <span>99</span>
+        </section>
         <!--6. список соц-медиа-->
+        <ul>
+            <li><button><img src='/' alt='vk'></button>
+            <li><button><img src='/' alt='fb'></button>
+            <li><button><img src='/' alt='pinterest'></button>
+        </ul>
         <!--7. инфа про автора-->
+        <aside>
+            <article>
+                <figure>
+                    <img src="https://habracdn.net/habr/images/1463757608/logo.svg?r=2" alt="лицо автора">
+                    <li><a href="">Имя чувака </a><a href="">@Никчувака</a>
+                    <li>Имя фамилия
+                    <meter value="4" max=100>Карма</meter>
+                </figure>
+            </article>
+        </aside>
         <!--8 самое читаемое\\асайд-->
-        <!--9 Переключалка инфы про автора-->
+        <aside>
+            <article>
+                <h1>Самое читаемое </h1>
+                <a href='/'>article 1</a>
+                <a href='/'>article 2</a>
+                <a href='/'>article 3</a>
+                <a href='/'>article 4</a>
+            </article>
+        </aside>
+        
         <!--10 комментарии-->
+        <section>
+            <h1>
+                Комментарии (4343)
+            </h1>
+            <!--коммент-->
+            <article>
+                <hgroup>
+                    <h1><a href='/'>Вася Пупкин</a></h1>
+                    <h1>
+                        <time>21.05.2016</time> 
+                        <a href='/'>#</a>
+                    </h1>
+                </hgroup>
+                <p>Что то я никогда таких типичных вопросов не слышал на собеседованиях.</p>
+                <!--респонсы-->
+               <section>
+                   <article>
+                    <hgroup>
+                        <h1><a href='/'>Вася Пупкин</a></h1>
+                        <h1>
+                            <time>21.05.2016</time> 
+                            <a href='/'>#</a>
+                        </h1>
+                    </hgroup>
+                   <p>Что то я никогда таких типичных вопросов не слышал на собеседованиях.</p>
+               </section>
+            </article>
+               </section>
+            </article>
+        </section>
     </main>
         <!--11 асайды хабы что обсуждают похожие публикации-->
+        <aside>
+            <article>
+                <h1>Похожие публикации</h1>
+                <a href='/'>article 1</a>
+                <a href='/'>article 2</a>
+                <a href='/'>article 3</a>
+                <a href='/'>article 4</a>
+            </article>
+        </aside>
         <!--12 Интересные публикации-->
+        <aside>
+            <aside>
+            <article>
+                <h1>Интересные публикации</h1>
+                <a href='/'>article 1</a>
+                <a href='/'>article 2</a>
+                <a href='/'>article 3</a>
+                <a href='/'>article 4</a>
+            </article>
+        </aside>
+        </aside>
  <!--13 футер-->
+ <footer>
      <!--14 карта сайта-->
+     <menu>
+        <li><a href='/'>Войти</a>
+        <li><a href='/'>Регистрация</a>
+        <h1>Разделы</h1>
+        <li><a href='/'>Публикации</a>
+        <li><a href='/'>Хабы</a>
+        <li><a href='/'>Компании</a>
+        <li><a href='/'>Пользователи</a>
+        <li><a href='/'>Q&A</a>
+        <li><a href='/'>Песочница</a>
+        <h1 >Инфо</h1>
+        <li><a href='/'>О сайте</a>
+        <li><a href='/'>Правила</a>
+        <li><a href='/'>Помощь</a>
+        <li><a href='/'>Соглашение</a>
+        <h1>Услуги</h1>
+        <li><a href='/'>Реклама</a>
+        <li><a href='/'>Спецпроекты</a>
+        <li><a href='/'>Тарифы</a>
+        <li><a href='/'>Контент</a>
+        <li><a href='/'>Вебинары</a>
+        <h1>Разное</h1>
+        <li><a href='/'>Приложения</a>
+        <li><a href='/'>Тест-драйв</a>
+        <li><a href='/'>Помощь стартапам</a>
+        <li><a href='/'>Работа в IT</a>
+    </menu>
      <!-- 15 смолл копирайты-->
+     <small>
+        <a href='/'>© TM </a>
+        <a href='/'>Служба поддержки</a>
+        <a href='/'>Мобильная версия</a>
+     </small>
+ </footer>
+     
