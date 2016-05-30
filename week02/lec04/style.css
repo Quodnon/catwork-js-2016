@@ -1,0 +1,13 @@
+body 
+{
+
+    
+}
+.nav-buttons:before
+{
+    display: flex;
+}
+.nav-buttons
+{
+    justify-content:flex;
+}
