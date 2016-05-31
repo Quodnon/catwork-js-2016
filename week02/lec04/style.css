@@ -1,13 +1,7 @@
-body 
-{
-
-    
+main {
+  margin: 0;
+  background-color: #ff0000;
 }
-.nav-buttons:before
-{
-    display: flex;
-}
-.nav-buttons
-{
-    justify-content:flex;
+.order-details {
+  background-color: #ff0000;
 }
