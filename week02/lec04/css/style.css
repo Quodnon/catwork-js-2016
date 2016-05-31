@@ -1,0 +1,23 @@
+body {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer {
+  background-color: #eceef4;
+}
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+footer-content li {
+  margin-top: 5px;
+}
+.footer-content li h4 {
+  text-transform: uppercase;
+}
+.social-media {
+  display: block;
+  font-size: large;
+}
