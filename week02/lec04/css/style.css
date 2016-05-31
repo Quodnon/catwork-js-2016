@@ -16,8 +16,14 @@ footer-content li {
 }
 .footer-content li h4 {
   text-transform: uppercase;
+  font-weight: bold;
+}
+.footer-content li h4:before {
+  font-size: 200%;
+  margin-left: -30px;
 }
 .social-media {
   display: block;
-  font-size: large;
+  font-size: 150%;
+  margin: 5px;
 }
