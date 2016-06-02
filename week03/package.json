@@ -1,0 +1,14 @@
+{
+  "name": "deep-throat-assign",
+  "version": "1.0.0",
+  "description": "custom object.assign",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "assign"
+  ],
+  "author": "quodnon denysyuk",
+  "license": "MIT"
+}
