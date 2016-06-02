@@ -9,7 +9,10 @@ function deep_assign(target,result)
     for (var i=0; i<keys.length;keys++){
       let  propDescriptor = Object.getOwnPropertyDescriptor(target, keys[i])
         if (typeof propDescriptor.value =='undefined') {
-            
+            if (typeof propDescriptor.get =='function')
+            {
+                Object.defineProperty(res,keys[i],{value:propDescriptor.get()})
+            }
         }
     }
     /*
@@ -18,6 +21,7 @@ function deep_assign(target,result)
         -case object - recursive
         -case propert
     */
+    result =res;
 }
 
 module.exports = function deepThroatAssign(target, resultObj){
@@ -34,6 +38,6 @@ module.exports = function deepThroatAssign(target, resultObj){
     Target:
     ${target}
     Result:
-    ${resultObj}
+    ${Object.keys(resultObj)}
     `);
 }
