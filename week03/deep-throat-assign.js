@@ -5,7 +5,7 @@
 function deep_assign(target,result)
 {
     let keys =Object.keys(target)
-    let res = null
+    let res = {}
     for (var i=0; i<keys.length;keys++){
       let  propDescriptor = Object.getOwnPropertyDescriptor(target, keys[i])
         if (typeof propDescriptor.value =='undefined') {
