@@ -26,18 +26,18 @@ function deep_assign(target,result)
 
 module.exports = function deepThroatAssign(target, resultObj){
     console.log(`
-    1===before
-    Target:
-    ${target}
-    Result:
-    ${resultObj}
+        1===before
+        Target:
+        ${target}
+        Result:
+        ${resultObj}
     `);
     deep_assign(target,resultObj);
     console.log(`
-    2===before
-    Target:
-    ${target}
-    Result:
-    ${Object.keys(resultObj)}
+        2===before
+        Target:
+        ${target}
+        Result:
+        ${Object.keys(resultObj)}
     `);
 }

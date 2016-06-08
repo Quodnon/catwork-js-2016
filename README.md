@@ -7,4 +7,4 @@
 [validator](https://validator.w3.org/nu/#l51c20)
 
 
-[task2 on gh-pages](https://quodnon.github.io/catwork-js-2016/)
+[task2 on gh-pages](https://quodnon.github.io/catwork-js-2016/week02/lec04/sematnicForm.html)
