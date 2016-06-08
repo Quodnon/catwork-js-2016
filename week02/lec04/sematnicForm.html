@@ -9,9 +9,9 @@
     </head>
     <body>
         <header class=nav-buttons>
-            <a class='go-back' href="#" role='button' >Go Back</a>
+            <a class='go-back icon-left' href="#" role='button' >Go Back</a>
             <a class=logo href="#" role=img><img src="img/logo.png"/></a>
-            <a class=sign-in href="#" role=button>Sign In</a>
+            <a class='sign-in icon-user-1'href="#" role='button'>Sign In</a>
         </header>
         <main>
             <form>
@@ -39,7 +39,7 @@
                             </fieldset>
                         </li>
                         <li>
-                            <article>
+                            <article class=help-info>
                                 <h1 class=icon-lifebuoy>help-center</h1>
                                 If you need an assistance while placing the order<br>
                                 please contact us or just drink a shot or two<br>
@@ -50,17 +50,17 @@
                 </section>
                 <section class=order-setup>
                     <h1>Select what you want to translate</h1>
-                     <label>
+                     <label class=radio-wrapper>
+                         <input type="radio" name="obj-translation"/>
                          <img src="img/img-1.png" alt='1 source'></img>
-                         <input type="radio" name="obj-translation"/>
                      </label>
-                     <label>
+                     <label class=radio-wrapper>
+                         <input type="radio" name="obj-translation"/>
                          <img src="img/img-2.png" alt='2 source'></img>
-                         <input type="radio" name="obj-translation"/>
                      </label>
-                     <label>
-                         <img src="img/img-3.png" alt='3 source'></img>
+                     <label class=radio-wrapper>
                          <input type="radio" name="obj-translation"/>
+                         <img src="img/img-3.png" alt='3 source'></img>
                      </label>
                      <fieldset class=input-set>
                          <h1>Upload your documents</h1>
@@ -73,10 +73,10 @@
                          <h1>Select your desired tone</h1>
                      </fieldset>
                      <fieldset class=urgency-set>
-                         <h1>tell us how urgent this job is</h1>
+                         <h1>Tell us how urgent this job is</h1>
                      </fieldset>
-                     <fieldset class=urgency-set>
-                         <h1>tell us how urgent this job is</h1>
+                     <fieldset class=payment-set>
+                         <h1>Sign up and choose a payment method</h1>
                      </fieldset>
                 </section>
                 <section class=order-submission>

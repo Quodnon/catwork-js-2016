@@ -1,10 +1,123 @@
+html {
+  font-family: sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: sans-serif;
+  background-color: #eceef4;
+}
+header a,
+header a:active,
+header a:visited {
+  text-decoration: none;
+  color: #a5abc5;
+}
+.button-as-a {
+  width: 200px;
+  background-color: #eceef4;
+  border: 1px solid #6e768f;
+  border-radius: 5px;
+  color: #a5abc5;
+  padding: 15px;
+  text-align: center;
+}
+.go-back {
+  width: 200px;
+  background-color: #eceef4;
+  border: 1px solid #6e768f;
+  border-radius: 5px;
+  color: #a5abc5;
+  padding: 15px;
+  text-align: center;
+}
+.sign-in {
+  width: 200px;
+  background-color: #eceef4;
+  border: 1px solid #6e768f;
+  border-radius: 5px;
+  color: #a5abc5;
+  padding: 15px;
+  text-align: center;
+}
+.header-steps {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 150%;
+  color: #6e768f;
+}
+.circled-header {
+  margin-right: 30px;
+  border-radius: 50%;
+  border: 2px solid #6e768f;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10PX;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.language-set > h1,
+.input-set > h1,
+.tone-set > h1,
+.urgency-set > h1,
+.payment-set > h1 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 150%;
+  color: #6e768f;
+}
+.language-set > h1:before,
+.input-set > h1:before,
+.tone-set > h1:before,
+.urgency-set > h1:before,
+.payment-set > h1:before {
+  margin-right: 30px;
+  border-radius: 50%;
+  border: 2px solid #6e768f;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10PX;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.input-set > h1:before {
+  content: '1';
+}
+.language-set > h1:before {
+  content: '2';
+}
+.tone-set > h1:before {
+  content: '3';
+}
+.urgency-set > h1:before {
+  content: '4';
+}
+.payment-set > h1:before {
+  content: '5';
+}
+.radio-wrapper input {
+  visibility: hidden;
+  position: absolute;
+}
+.radio-wrapper img {
+  cursor: pointer;
+}
+.radio-wrapper input:checked + img {
+  /* (RADIO CHECKED) IMAGE STYLES */
+  border: 5px solid #76a7e1;
+  border-radius: 3px;
+}
 footer {
   background-color: #eceef4;
 }
 .order-description li {
   display: inline-block;
   vertical-align: top;
-  margin-top: 40px;
   margin-left: 10%;
 }
 .footer-content li {
