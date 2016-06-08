@@ -4,39 +4,64 @@
         <meta charset=utf-8>
         <title>форма для домашки</title>
         <link rel="stylesheet" href="css/reset.css" type="text/css" />
-        <link rel="stylesheet" href="css/style.css" type="text/css" />
         <link rel="stylesheet" href="css/kotofont.css" type="text/css" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
     </head>
     <body>
         <header class=nav-buttons>
-            <a class='go-back' href="#" role='button' >Go Back</a>
+            <a class='go-back icon-left' href="#" role='button' >Go Back</a>
             <a class=logo href="#" role=img><img src="img/logo.png"/></a>
-            <a class=sign-in href="#" role=button>Sign In</a>
+            <a class='sign-in icon-user-1'href="#" role='button'>Sign In</a>
         </header>
         <main>
             <form>
                 <section class=order-description>
-                    <h1>Your order</h1>
-                    <table class=order-info>
-                        <tr>
-                            <th>items</th>
-                            <th>details</th>
-                            <th>price</th>
-                        </tr>
-                        <tr>
-                            <td>2 documents</td>
-                            <td>2 languages</td>
-                            <td><data data=USD24.44>$ 24.44</data></td>
-                        </tr>
-                    </table>
-                    <fieldset class=order-fastsubmit>
-                        <button class=place-order>Place order</button>
-                        <button class=print-quote>Print quote</button>
-                    </fieldset>
+                    <ul>
+                        <li>
+                            <h1 class='icon-clipboard'>Your order</h1>
+                            <table class=order-info>
+                                <tr>
+                                    <th>items</th>
+                                    <th>details</th>
+                                    <th>price</th>
+                                </tr>
+                                <tr>
+                                    <td>2 documents</td>
+                                    <td>2 languages</td>
+                                    <td><data data=USD24.44>$ 24.44</data></td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li>
+                            <fieldset class=order-fastsubmit>
+                                <button class=place-order>Place order</button>
+                                <button class=print-quote>Print quote</button>
+                            </fieldset>
+                        </li>
+                        <li>
+                            <article class=help-info>
+                                <h1 class=icon-lifebuoy>help-center</h1>
+                                If you need an assistance while placing the order<br>
+                                please contact us or just drink a shot or two<br>
+                                of brand wine in the nearest bar<br>
+                            </article>
+                        </li>
+                    </ul>
                 </section>
                 <section class=order-setup>
                     <h1>Select what you want to translate</h1>
-                     radiobuttons
+                     <label class=radio-wrapper>
+                         <input type="radio" name="obj-translation"/>
+                         <img src="img/img-1.png" alt='1 source'></img>
+                     </label>
+                     <label class=radio-wrapper>
+                         <input type="radio" name="obj-translation"/>
+                         <img src="img/img-2.png" alt='2 source'></img>
+                     </label>
+                     <label class=radio-wrapper>
+                         <input type="radio" name="obj-translation"/>
+                         <img src="img/img-3.png" alt='3 source'></img>
+                     </label>
                      <fieldset class=input-set>
                          <h1>Upload your documents</h1>
                          <input type="file" name=""/>
@@ -48,10 +73,10 @@
                          <h1>Select your desired tone</h1>
                      </fieldset>
                      <fieldset class=urgency-set>
-                         <h1>tell us how urgent this job is</h1>
+                         <h1>Tell us how urgent this job is</h1>
                      </fieldset>
-                     <fieldset class=urgency-set>
-                         <h1>tell us how urgent this job is</h1>
+                     <fieldset class=payment-set>
+                         <h1>Sign up and choose a payment method</h1>
                      </fieldset>
                 </section>
                 <section class=order-submission>
@@ -63,24 +88,24 @@
             <ul class="footer-content">
                 <li>
                     <h4 class="icon-heart-empty">what we do</h4>
-                    We provide a full range of language<br>
+                    <p><em>We provide a full range of language<br>
                     services including content development,<br>
                     document, website and <br>
-                    ssocial media accountstranslations.</p>
+                    ssocial media accountstranslations.</em></p>
                 </li>
                 <li>
                     <h4 class='icon-compass'>our main office</h4>
                     <address>
-                        Dubai, UAE</br>
-                        P.O. Box: 502735</br>
-                        Phone: +971(0)9999999</br>
+                        Dubai, UAE</br></br>
+                        P.O. Box: 502735</br></br>
+                        Phone: +971(0)9999999</br></br>
                     </address>
                 </li>
                 <li>
                     <h4 class="icon-rss">connect with us</h4>
-                    <a class="social-media icon-facebook-squared" href="#"></a>
-                    <a class="social-media icon-twitter-circled" href="#"></a>
-                    <a class="social-media icon-linkedin-circled" href="#"></a>
+                    <a class="social-media icon-facebook-squared" href="#">Facebook</a>
+                    <a class="social-media icon-twitter-circled" href="#">Twitter</a>
+                    <a class="social-media icon-linkedin-circled" href="#">Linkedin</a>
                 </li>
                 <li>
                     <a href='#'><img src="img/logo.png"></img></a>
