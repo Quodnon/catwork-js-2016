@@ -25,7 +25,7 @@ header a:visited {
 main {
   background-color: #eceef4;
 }
-form {
+main form {
   border: 50px solid #eceef4;
   /*LOOOL 50px but anyway =(*/
   background-color: #ffffff;
@@ -134,22 +134,6 @@ form {
   border: 5px solid #76a7e1;
   border-radius: 3px;
 }
-.radio-wrapper input:checked + img.radio-wrapper input:checked + img.radio-wrapper input:checked + img:after,
-.radio-wrapper input:checked + img.radio-wrapper input:checked + img.radio-wrapper input:checked + span:after,
-.radio-wrapper input:checked + img.radio-wrapper input:checked + span.radio-wrapper input:checked + img:after,
-.radio-wrapper input:checked + img.radio-wrapper input:checked + span.radio-wrapper input:checked + span:after,
-.radio-wrapper input:checked + span.radio-wrapper input:checked + img.radio-wrapper input:checked + img:after,
-.radio-wrapper input:checked + span.radio-wrapper input:checked + img.radio-wrapper input:checked + span:after,
-.radio-wrapper input:checked + span.radio-wrapper input:checked + span.radio-wrapper input:checked + img:after,
-.radio-wrapper input:checked + span.radio-wrapper input:checked + span.radio-wrapper input:checked + span:after {
-  content: '\e822';
-  font-family: kotofont;
-  font-size: 24px;
-  color: #76a7e1;
-  margin-left: -13px;
-  margin-top: -15px;
-  position: absolute;
-}
 .order-fastsubmit {
   text-align: center;
 }
@@ -157,6 +141,7 @@ form {
   display: block;
 }
 button {
+  width: 200px;
   background-color: #f7f7fa;
   color: #6e7692;
   font-size: 12px;
@@ -168,13 +153,31 @@ button {
   border-radius: 5px;
   text-transform: uppercase;
 }
-.place-order {
-  color: #ffffff;
-  font-weight: bold;
-  background-color: #5fcac6;
+.order-setup > h1 {
+  margin: 20px;
+  margin-left: 30%;
+  font-size: 24px;
+  width: 600px;
+  text-align: center;
+  border-bottom: 2px solid #6e7692;
 }
-.print-quote {
-  text-transform: uppercase;
+.order-setup label:first-of-type {
+  margin-left: 15%;
+}
+.order-setup > .radio-wrapper {
+  display: inline-block;
+  width: 28%;
+}
+.order-setup .tone-set span {
+  margin-top: 60px;
+  background-color: #f7f7fa;
+  color: #6e7692;
+  font-size: 16px;
+  padding: 20px;
+}
+.order-setup .tone-set .radio-wrapper {
+  margin-top: 60px;
+  margin-left: 30px;
 }
 .custom-radio-input-span {
   margin-top: 60px;
@@ -182,25 +185,6 @@ button {
   color: #6e7692;
   font-size: 16px;
   padding: 20px;
-}
-.tone-set span {
-  margin-top: 60px;
-  background-color: #f7f7fa;
-  color: #6e7692;
-  font-size: 16px;
-  padding: 20px;
-}
-.tone-set .radio-wrapper {
-  margin-top: 60px;
-  margin-left: 30px;
-}
-footer {
-  background-color: #eceef4;
-}
-.order-description li {
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 10%;
 }
 .order-description {
   margin-bottom: 10px;
@@ -224,6 +208,40 @@ footer {
 .order-description td {
   padding-left: 15px;
 }
+.order-description li {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10%;
+}
+.order-description .place-order {
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #5fcac6;
+}
+.order-description .print-quote {
+  text-transform: uppercase;
+}
+.order-description address {
+  margin-top: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.order-description address a {
+  color: inherit;
+  text-decoration: none;
+}
+footer {
+  background-color: #eceef4;
+}
+.footer-content .social-media {
+  display: block;
+  margin: 5px;
+  text-decoration: none;
+  color: #6e768f;
+}
+.footer-content .social-media:before {
+  margin-right: 20px;
+}
 .footer-content li {
   display: inline-block;
   vertical-align: top;
@@ -238,11 +256,4 @@ footer {
 .footer-content li h4:before {
   font-size: 200%;
   margin-left: -30px;
-}
-.social-media {
-  display: block;
-  margin: 5px;
-}
-.social-media:before {
-  margin-right: 20px;
 }
