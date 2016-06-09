@@ -149,7 +149,7 @@ main
         display: block;
     }
 } 
-button
+button,select
 {
     width:200px;
     background-color: rgb(247,247,250);
@@ -166,7 +166,17 @@ button
 
 .order-setup
 {
-    
+    & fieldset
+    {
+        margin-left: 30px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        
+        h1 
+        {
+            margin-left: 15px;
+        }
+    }
     &>h1
     {
         margin:20px;
@@ -176,17 +186,27 @@ button
         text-align: center;
         border-bottom: 2px solid rgb(110,118,146);
     }
-    label:first-of-type
+    &>label:first-of-type
     {
         margin-left:15%
-        
     }
     &>.radio-wrapper
     {
         display: inline-block;
         width: 28%;
     }
-    
+    .input-set
+    {
+        input
+        {
+            margin-top: 20px !important;
+        }
+        span
+        {
+            .button-as-a;
+              margin-top: 20px !important;
+        }
+    }
     .tone-set
     {
         span

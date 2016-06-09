@@ -139,7 +139,8 @@ main form {
 .order-fastsubmit button {
   display: block;
 }
-button {
+button,
+select {
   width: 200px;
   background-color: #f7f7fa;
   color: #6e7692;
@@ -152,6 +153,14 @@ button {
   border-radius: 5px;
   text-transform: uppercase;
 }
+.order-setup fieldset {
+  margin-left: 30px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.order-setup fieldset h1 {
+  margin-left: 15px;
+}
 .order-setup > h1 {
   margin: 20px;
   margin-left: 30%;
@@ -160,12 +169,25 @@ button {
   text-align: center;
   border-bottom: 2px solid #6e7692;
 }
-.order-setup label:first-of-type {
+.order-setup > label:first-of-type {
   margin-left: 15%;
 }
 .order-setup > .radio-wrapper {
   display: inline-block;
   width: 28%;
+}
+.order-setup .input-set label {
+  margin-top: 20px !important;
+}
+.order-setup .input-set span {
+  width: 200px;
+  background-color: #eceef4;
+  border: 1px solid #6e768f;
+  border-radius: 5px;
+  color: #a5abc5;
+  padding: 15px;
+  text-align: center;
+  margin-top: 20px !important;
 }
 .order-setup .tone-set span {
   margin-top: 60px;
