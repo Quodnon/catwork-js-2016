@@ -45,12 +45,15 @@
                                 If you need an assistance while placing the order<br>
                                 please contact us or just drink a shot or two<br>
                                 of brand wine in the nearest bar<br>
+                                <address>
+                                    <a href="callto:234444">+4(324)239-82-93-48</a>   <a href="mailto:vlad@htmlbook.ru?subject=HTML">fewalkdfslk@fdslj.c</a>
+                                </address>
                             </article>
                         </li>
                     </ul>
                 </section>
                 <section class=order-setup>
-                    <h1>Select what you want to translate</h1>
+                    <h1 class=''>Select what you want to translate</h1>
                      <label class=radio-wrapper>
                          <input type="radio" name="obj-translation"/>
                          <img src="img/img-1.png" alt='1 source'></img>
@@ -65,18 +68,22 @@
                      </label>
                      <fieldset class=input-set>
                          <h1>Upload your documents</h1>
-                         <input type="file" name=""/>
+                         <label class=radio-wrapper>
+                            <input type="file" name="obj-urgency"/>
+                            <span class='icon-cloud'>Select Files here</span>
+                         </label>
                      </fieldset>
                      <fieldset class=language-set>
                          <h1>Select your language pairings</h1>
-                         from: <select class=from-language>
+                         <p>from: <select class=from-language>
                                   <option value="volvo">Volvo</option>
                                   <option value="saab">Saab</option>
                                   <option value="mercedes">Mercedes</option>
                                   <option value="audi">Audi</option>
                                 </select>
+                        </p>
                          </br>
-                         to:<select>
+                         <p>to:<select>
                               <option value="volvo">Volvo</option>
                               <option value="saab">Saab</option>
                               <option value="mercedes">Mercedes</option>
@@ -91,13 +98,14 @@
                         </select>
                         <span class=icon-bucket></span>
                         <button>+ Add</button>
+                        </p>
                      </fieldset>
                      <fieldset class=tone-set>
-                         <h1>Select your desired tone</h1>
-                               <label class=radio-wrapper>
-                         <input type="radio" name="obj-urgency"/>
-                         <span class=icon-megaphone>Media</span>
-                     </label>
+                        <h1>Select your desired tone</h1>
+                        <label class=radio-wrapper>
+                            <input type="radio" name="obj-urgency"/>
+                            <span class=icon-megaphone>Media</span>
+                        </label>
                      <label class=radio-wrapper>
                          <input type="radio" name="obj-urgency"/>
                         <span class=icon-chat>Friendly/Casual</span>
@@ -107,16 +115,27 @@
                          <span class=icon-bag>Corporate Pro</span>
                      </label>
                      </fieldset>
-                     <fieldset class=urgency-set>
-                         <h1>Tell us how urgent this job is</h1>
-                   
+                    <fieldset class=urgency-set>
+                        <h1>Tell us how urgent this job is</h1>
+                        <input type=range class=urgency-input>how urgent is it</input>
+                        <article>
+                            <h1>
+                                
+                            </h1>
+                            <p>
+                                
+                            </p>
+                        </article>
                      </fieldset>
                      <fieldset class=payment-set>
                          <h1>Sign up and choose a payment method</h1>
                      </fieldset>
                 </section>
                 <section class=order-submission>
-                    
+                    <input type="checkbox" name="agreeTerms">I read and agree to<a href='#'>Terms and Conditions</a>
+                    </input>
+                     <button class=place-order>place order</button>
+                    <button class=print-quote>print quote</button>
                 </section>
             </form>
         </main>
