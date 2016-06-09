@@ -1,6 +1,7 @@
 html
 {
     font-family: sans-serif;
+    color:rgb(110,118,143);
 }
 header
 {
@@ -16,6 +17,29 @@ header a, header a:active, header a:visited
     text-decoration: none;
     color:#a5abc5;
 }
+.tone-set , .urgency-set
+{
+    display: inline-block;
+}
+.tone-set label
+{
+    display: block;
+}
+main
+{
+    background-color: rgb(236,238,244);
+}
+form 
+{
+    border:50px solid rgb(236,238,244);/*LOOOL 50px but anyway =(*/
+    background-color: rgb(255,255,255);
+      display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-content:center;
+}
+ 
+
 .button-as-a
 {
     width: 200px;
@@ -97,19 +121,77 @@ header a, header a:active, header a:visited
     position: absolute;
 }
 
-.radio-wrapper img
+.radio-wrapper img, .radio-wrapper span
 {
     cursor:pointer;
 }
 
-.radio-wrapper input:checked + img
+.radio-wrapper input:checked + img ,.radio-wrapper input:checked + span
 { /* (RADIO CHECKED) IMAGE STYLES */
     border:5px solid rgb(118,167,225);
     border-radius: 3px;
+     &&&:after
+     {
+        content: '\e822';
+        font-family: kotofont;
+        font-size: 24px;
+        color: rgb(118,167,225);
+        margin-left: -13px;
+        margin-top: -15px;
+        position: absolute;
+     }
 }
 
-
-
+.order-fastsubmit
+{
+    text-align: center;
+}
+.order-fastsubmit button
+{
+    display: block;
+}
+button
+{
+    background-color: rgb(247,247,250);
+    color:  rgb(110,118,146);
+    font-size: 12px;
+    padding: 20px;
+    padding-left: 40px;
+    margin-top: 5px;
+    padding-right: 40px;
+    border:1px solid rgb(110,118,146);
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+.place-order 
+{
+   
+    color:rgb(255,255,255);
+    font-weight: bold;
+    background-color: rgb(95,202,198);
+}
+.print-quote
+{ 
+    text-transform: uppercase;
+    
+}
+.custom-radio-input-span
+{
+    margin-top: 60px;
+    background-color: rgb(247,247,250);
+    color:  rgb(110,118,146);
+    font-size: 16px;
+    padding: 20px;
+}
+.tone-set span
+{
+    .custom-radio-input-span
+}
+.tone-set .radio-wrapper
+{
+    margin-top: 60px;
+    margin-left: 30px;
+}
 
 
 footer
@@ -122,7 +204,32 @@ footer
     vertical-align: top;
     margin-left: 10%;
  }
- 
+
+.order-description 
+{    
+    margin-bottom: 10px;
+    border-bottom: 3px solid rgb(110,118,146);
+    h1
+    {    
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    h1,th
+    {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .help-info
+    {
+        border-left:  3px solid rgb(110,118,146);
+        height: 150px;
+        padding-left: 20px;
+    }
+    th,td
+    {
+        padding-left: 15px;
+    }
+}
  .footer-content li
  {
     display: inline-block;

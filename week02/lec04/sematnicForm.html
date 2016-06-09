@@ -34,12 +34,13 @@
                         </li>
                         <li>
                             <fieldset class=order-fastsubmit>
-                                <button class=place-order>Place order</button>
-                                <button class=print-quote>Print quote</button>
+                                <button class=place-order>place order
+                                </button>
+                                <button class=print-quote>print quote</button>
                             </fieldset>
                         </li>
-                        <li>
-                            <article class=help-info>
+                        <li class=help-info>
+                            <article >
                                 <h1 class=icon-lifebuoy>help-center</h1>
                                 If you need an assistance while placing the order<br>
                                 please contact us or just drink a shot or two<br>
@@ -68,12 +69,47 @@
                      </fieldset>
                      <fieldset class=language-set>
                          <h1>Select your language pairings</h1>
+                         from: <select class=from-language>
+                                  <option value="volvo">Volvo</option>
+                                  <option value="saab">Saab</option>
+                                  <option value="mercedes">Mercedes</option>
+                                  <option value="audi">Audi</option>
+                                </select>
+                         </br>
+                         to:<select>
+                              <option value="volvo">Volvo</option>
+                              <option value="saab">Saab</option>
+                              <option value="mercedes">Mercedes</option>
+                              <option value="audi">Audi</option>
+                            </select>
+                            +
+                        <select>
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="mercedes">Mercedes</option>
+                          <option value="audi">Audi</option>
+                        </select>
+                        <span class=icon-bucket></span>
+                        <button>+ Add</button>
                      </fieldset>
                      <fieldset class=tone-set>
                          <h1>Select your desired tone</h1>
+                               <label class=radio-wrapper>
+                         <input type="radio" name="obj-urgency"/>
+                         <span class=icon-megaphone>Media</span>
+                     </label>
+                     <label class=radio-wrapper>
+                         <input type="radio" name="obj-urgency"/>
+                        <span class=icon-chat>Friendly/Casual</span>
+                     </label>
+                     <label class=radio-wrapper>
+                         <input type="radio" name="obj-urgency"/>
+                         <span class=icon-bag>Corporate Pro</span>
+                     </label>
                      </fieldset>
                      <fieldset class=urgency-set>
                          <h1>Tell us how urgent this job is</h1>
+                   
                      </fieldset>
                      <fieldset class=payment-set>
                          <h1>Sign up and choose a payment method</h1>
