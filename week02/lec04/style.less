@@ -45,6 +45,13 @@ main
         flex-direction:column;
         justify-content:space-between;
         align-content:center;
+        &:invalid
+        { 
+            input[type='submit']
+            {
+                background-color: grey!important;
+            }
+        }
     }
 }
 
@@ -146,15 +153,8 @@ main
  
  
 
-.order-fastsubmit
-{
-    text-align: center;
-    button
-    {
-        display: block;
-    }
-} 
-button,select
+
+button,select,input[type="submit"]
 {
     width:200px;
     background-color: rgb(247,247,250);
@@ -168,7 +168,14 @@ button,select
     border-radius: 5px;
     text-transform: uppercase;
 }
-
+.order-fastsubmit
+{
+    text-align: center;
+    button
+    {
+        display: block;
+    }
+} 
 .order-setup
 {
     & fieldset
@@ -359,7 +366,7 @@ button,select
     {
         display: inline-block;
         vertical-align: top;
-        margin-left: 10%;
+        margin-left: 6%;
     }
     .place-order 
     {
@@ -438,6 +445,9 @@ button,select
     margin-bottom: 20px;
     display: flex;
     justify-content:flex-end;
+    input[type='checkbox']{
+        padding-right: 40px;
+    }
     button
     {
         margin-left: 15px;
@@ -445,7 +455,7 @@ button,select
     }
     .place-order 
     {
-       
+        margin-left: 30px;
         color:rgb(255,255,255);
         font-weight: bold;
         background-color: rgb(95,202,198);
