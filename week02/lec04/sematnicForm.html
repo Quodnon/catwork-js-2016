@@ -34,8 +34,7 @@
                         </li>
                         <li>
                             <fieldset class=order-fastsubmit>
-                                <button class=place-order>place order
-                                </button>
+                                <input type="submit" class=place-order name='place order'  value='place order'/>
                                 <button class=print-quote>print quote</button>
                             </fieldset>
                         </li>
@@ -59,51 +58,51 @@
                          <img src="img/img-1.png" alt='1 source'></img>
                      </label>
                      <label class=radio-wrapper>
-                         <input type="radio" name="obj-translation"/>
+                         <input required type="radio" name="obj-translation"/>
                          <img src="img/img-2.png" alt='2 source'></img>
                      </label>
                      <label class=radio-wrapper>
                          <input type="radio" name="obj-translation"/>
                          <img src="img/img-3.png" alt='3 source'></img>
                      </label>
-                     <fieldset class=input-set>
+                    <fieldset class=input-set>
                          <h1>Upload your documents</h1>
                          <label class=radio-wrapper>
                             <input type="file" name="obj-urgency"/>
                             <span class='icon-cloud'>Select Files here</span>
                          </label>
-                     </fieldset>
-                     <fieldset class=language-set>
+                    </fieldset>
+                    <fieldset class=language-set>
                          <h1>Select your language pairings</h1>
                          <p>from: <select class=from-language>
-                                  <option value="volvo">Volvo</option>
-                                  <option value="saab">Saab</option>
-                                  <option value="mercedes">Mercedes</option>
-                                  <option value="audi">Audi</option>
+                                  <option value="english">english</option>
+                                  <option value="german">german</option>
+                                  <option value="spanish">spanish</option>
+                                  <option value="latin">latin</option>
                                 </select>
                         </p>
                          </br>
                          <p>to:<select>
-                              <option value="volvo">Volvo</option>
-                              <option value="saab">Saab</option>
-                              <option value="mercedes">Mercedes</option>
-                              <option value="audi">Audi</option>
+                                <option value="english">english</option>
+                                <option value="german">german</option>
+                                <option value="spanish">spanish</option>
+                                <option value="latin">latin</option>
                             </select>
                             +
                         <select>
-                          <option value="volvo">Volvo</option>
-                          <option value="saab">Saab</option>
-                          <option value="mercedes">Mercedes</option>
-                          <option value="audi">Audi</option>
+                            <option value="english">english</option>
+                            <option value="german">german</option>
+                            <option value="spanish">spanish</option>
+                            <option value="latin">latin</option>
                         </select>
                         <span class=icon-bucket></span>
                         <button>+ Add</button>
                         </p>
-                     </fieldset>
-                     <fieldset class=tone-set>
+                    </fieldset>
+                    <fieldset class=tone-set>
                         <h1>Select your desired tone</h1>
                         <label class=radio-wrapper>
-                            <input type="radio" name="obj-urgency"/>
+                            <input required type="radio" name="obj-urgency"/>
                             <span class=icon-megaphone>Media</span>
                         </label>
                      <label class=radio-wrapper>
@@ -117,24 +116,62 @@
                      </fieldset>
                     <fieldset class=urgency-set>
                         <h1>Tell us how urgent this job is</h1>
-                        <input type=range class=urgency-input>how urgent is it</input>
-                        <article>
-                            <h1>
-                                
+                        <input type=range class=urgency-input />
+                        <article class=urgency-description>
+                            <h1 class=icon-info-circled>
+                                Timeline Info 
                             </h1>
-                            <p>
-                                
-                            </p>
+                            <p>With an <b class='urgency-value'>Average</b> timeline setup, our expert can take a reasonable amount of time perfecting your translation</p>
                         </article>
                      </fieldset>
-                     <fieldset class=payment-set>
+                    <fieldset class=payment-set>
                          <h1>Sign up and choose a payment method</h1>
+                         <p> Already have an accout with us? <a href='#'>Sign In</a></p>
+                         <label for="fullname-card">
+                             full name</br>
+                             <input type="text" required pattern="[а-я,\s,А-Я,a-z,A-Z,-]+" name="fullname-card"/>
+                         </label>
+                        
+                         <label for="email-card">
+                             email address</br>
+                             <input type="email" name="email-card" required/>
+                         </label>
+                          <label for="password-card">
+                             choose your password</br>
+                             <input type="password" pattern="(.){8}+" name="password-card" required/>
+                         </label>
+                         </br>
+                         <label class=radio-wrapper>
+                             <input type="radio" name="obj-payment"/>
+                             <img src="img/1.png" alt='1 source'></img>
+                         </label>
+                         <label class=radio-wrapper>
+                             <input type="radio" name="obj-payment"/>
+                             <img src="img/2.png" alt='1 source'></img>
+                         </label>
+                         <label class=radio-wrapper>
+                             <input required type="radio" name="obj-payment"/>
+                             <img src="img/3.png" alt='1 source'></img>
+                         </label>
+                         </br>
+                         <label for="number-card">
+                             card number</br>
+                             <input type="text" pattern="(\d){4} (\d){4} (\d){4} (\d){4}" name="number-card" required/>
+                         </label>
+                         <label for="expire-card">
+                             expiry date</br>
+                             <input type="text" pattern="(\d}{2}\\(\d){2}" name="expire-card" required/>
+                         </label>
+                         <label for="ccv-card">
+                             code</br>
+                             <input type="text" pattern="(\d){3}" name="ccv-card" required/>
+                         </label>
                      </fieldset>
                 </section>
                 <section class=order-submission>
-                    <input type="checkbox" name="agreeTerms">I read and agree to<a href='#'>Terms and Conditions</a>
+                    <input type="checkbox" required name="agreeTerms">I read and agree to<a href='#'>Terms and Conditions</a>
                     </input>
-                     <button class=place-order>place order</button>
+                     <input type="submit" class=place-order value='place order' />
                     <button class=print-quote>print quote</button>
                 </section>
             </form>

@@ -34,10 +34,14 @@ main form {
   justify-content: space-between;
   align-content: center;
 }
+main form:invalid input[type='submit'] {
+  background-color: grey!important;
+}
 .button-as-a {
   width: 200px;
   background-color: #eceef4;
-  border: 1px solid #6e768f;
+  border: 1px solid;
+  border-color: #727895;
   border-radius: 5px;
   color: #a5abc5;
   padding: 15px;
@@ -46,7 +50,8 @@ main form {
 .go-back {
   width: 200px;
   background-color: #eceef4;
-  border: 1px solid #6e768f;
+  border: 1px solid;
+  border-color: #727895;
   border-radius: 5px;
   color: #a5abc5;
   padding: 15px;
@@ -55,7 +60,8 @@ main form {
 .sign-in {
   width: 200px;
   background-color: #eceef4;
-  border: 1px solid #6e768f;
+  border: 1px solid;
+  border-color: #727895;
   border-radius: 5px;
   color: #a5abc5;
   padding: 15px;
@@ -65,12 +71,12 @@ main form {
   margin-top: 15px;
   margin-bottom: 15px;
   font-size: 150%;
-  color: #6e768f;
+  color: #727895;
 }
 .circled-header {
   margin-right: 30px;
   border-radius: 50%;
-  border: 2px solid #6e768f;
+  border: 2px solid #727895;
   width: 70px;
   height: 70px;
   text-align: center;
@@ -87,7 +93,7 @@ main form {
   margin-top: 15px;
   margin-bottom: 15px;
   font-size: 150%;
-  color: #6e768f;
+  color: #727895;
 }
 .language-set > h1:before,
 .input-set > h1:before,
@@ -96,7 +102,7 @@ main form {
 .payment-set > h1:before {
   margin-right: 30px;
   border-radius: 50%;
-  border: 2px solid #6e768f;
+  border: 2px solid #727895;
   width: 70px;
   height: 70px;
   text-align: center;
@@ -133,14 +139,9 @@ main form {
   border: 5px solid #76a7e1;
   border-radius: 3px;
 }
-.order-fastsubmit {
-  text-align: center;
-}
-.order-fastsubmit button {
-  display: block;
-}
 button,
-select {
+select,
+input[type="submit"] {
   width: 200px;
   background-color: #f7f7fa;
   color: #6e7692;
@@ -153,10 +154,17 @@ select {
   border-radius: 5px;
   text-transform: uppercase;
 }
+.order-fastsubmit {
+  text-align: center;
+}
+.order-fastsubmit button {
+  display: block;
+}
 .order-setup fieldset {
   margin-left: 30px;
   margin-top: 20px;
   margin-bottom: 5px;
+  vertical-align: top;
 }
 .order-setup fieldset h1 {
   margin-left: 15px;
@@ -182,7 +190,8 @@ select {
 .order-setup .input-set span {
   width: 200px;
   background-color: #eceef4;
-  border: 1px solid #6e768f;
+  border: 1px solid;
+  border-color: #727895;
   border-radius: 5px;
   color: #a5abc5;
   padding: 15px;
@@ -204,75 +213,80 @@ select {
   margin-left: 30px;
 }
 .order-setup .urgency-set {
-  /* input[type=range]
-        {
-            
-            top: 50%;
-            left: 50%;
-            margin: -2.25em -17.75em;
-            width: 35.5em;
-            height: 4.5em;
-            background: none;
-            font: 1em;
-            cursor: pointer;
-            &, &::-webkit-slider-runnable-track, &::-webkit-slider-thumb {
-              -webkit-appearance: none;
-            }
-            &::-webkit-slider-runnable-track {
-              width: 35.5em;
-              height: 2.25em;
-              border-radius: .5em;
-              box-shadow: inset 0 0 0 0.25em #aaa;
-              background: linear-gradient(90deg, #fffc42, #ef230f);
-            }
-            &::-moz-range-track {
-              width: 35.5em;
-              height: 2.25em;
-              border-radius: .5em;
-              box-shadow: inset 0 0 0 0.25em #aaa;
-              background: linear-gradient(90deg, #fffc42, #ef230f);
-            }
-            &::-ms-track {
-              border: none;
-              width: 35.5em;
-              height: 2.25em;
-              border-radius: .5em;
-              box-shadow: inset 0 0 0 0.25em #aaa;
-              background: linear-gradient(90deg, #fffc42, #ef230f);
-              color: transparent;
-            }
-            &::-ms-fill-lower, &::-ms-tooltip {
-              display: none;
-            }
-            &::-webkit-slider-thumb {
-              margin-top: -0.625em;
-              border: none;
-              width: 3.5em;
-              height: 3.5em;
-              border-radius: .5em;
-              box-shadow: inset 0 0 0 0.25em #aaa, 0 0 0.5em #000, 0 0 1em #333;
-              background: linear-gradient(#fcfcfc, #d6d6d6);
-              cursor: ew-resize;
-            }
-            &::-moz-range-thumb {
-              border: none;
-              width: 3.5em;
-              height: 3.5em;
-              border-radius: .5em;
-              box-shadow: inset 0 0 0 0.25em #aaa, 0 0 0.5em #000, 0 0 1em #333;
-              background: linear-gradient(#fcfcfc, #d6d6d6);
-              cursor: ew-resize;
-            }
-            &::-ms-thumb {
-              border: none;
-              width: 3.5em;
-              height: 3.5em;
-              border-radius: .5em;
-              box-shadow: inset 0 0 0 0.25em #aaa, 0 0 0.5em #000, 0 0 1em #333;
-              background: linear-gradient(#fcfcfc, #d6d6d6);
-              cursor: ew-resize;
-            }
-        }*/
+  margin-left: 20px;
+  width: 50%;
+}
+.order-setup .urgency-set .urgency-input {
+  margin-left: 30px;
+  width: 300px;
+}
+.order-setup .urgency-set .urgency-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  margin-top: 1em;
+  border-radius: 50%;
+  background: #edbe76;
+  cursor: pointer;
+  margin-top: 0px;
+  /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+.order-setup .urgency-set .urgency-input::-moz-range-thumb {
+  height: 20px;
+  margin-top: 0.1875em;
+  width: 20px;
+  border-radius: 50%;
+  background: #edbe76;
+  cursor: pointer;
+}
+.order-setup .urgency-set .urgency-input::-ms-thumb {
+  height: 20px;
+  width: 20px;
+  margin-top: 0.1875em;
+  border-radius: 50%;
+  background: #edbe76;
+  cursor: pointer;
+}
+.order-setup .urgency-set .urgency-input::-webkit-slider-runnable-track {
+  height: 20px;
+  margin-top: 0px;
+  width: 100%;
+  background-color: #eceef4;
+  border-radius: 10px;
+}
+.order-setup .urgency-set .urgency-input::-moz-range-track {
+  height: 20px;
+  width: 100%;
+  background-color: #eceef4;
+  border-radius: 10px;
+}
+.order-setup .urgency-set .urgency-input::-ms-track {
+  height: 20px;
+  width: 100%;
+  background-color: #eceef4;
+  border-radius: 10px;
+}
+.order-setup .urgency-set h1 {
+  margin-top: 0px;
+}
+.order-setup .urgency-set .urgency-description {
+  border-radius: 5px;
+  border: 1px solid #727895;
+  margin-top: 30px;
+}
+.order-setup .urgency-set .urgency-description h1 {
+  margin-top: 10px;
+  font-size: bold;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.order-setup .urgency-set .urgency-description .urgency-value {
+  font-size: bold;
+  color: #edbe76;
+}
+.order-setup .urgency-set .urgency-description p {
+  padding: 40px;
+  padding-top: 20px;
 }
 .custom-radio-input-span {
   margin-top: 60px;
@@ -306,7 +320,7 @@ select {
 .order-description li {
   display: inline-block;
   vertical-align: top;
-  margin-left: 10%;
+  margin-left: 6%;
 }
 .order-description .place-order {
   color: #ffffff;
@@ -325,17 +339,52 @@ select {
   color: inherit;
   text-decoration: none;
 }
+.payment-set p {
+  margin-left: 4em;
+  margin-top: 2em;
+}
+.payment-set p a {
+  color: #727895;
+}
+.payment-set label {
+  display: inline-block;
+  text-transform: uppercase;
+  margin-left: 15px;
+  margin-top: 30px;
+}
+.payment-set .radio-wrapper {
+  margin-left: 30px;
+  margin-top: 50px;
+}
+.payment-set input {
+  font-family: sans-serif;
+  font-size: 24px;
+  border-radius: 5px;
+  border: 2px solid #eceef4;
+  outline: none;
+}
+.payment-set input:valid.payment-set input:valid::after {
+  font-family: kotofont;
+  color: #76a7e1;
+  content: '\e822';
+  font-size: large;
+  margin-left: -20px;
+}
 .order-submission {
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
   justify-content: flex-end;
 }
+.order-submission input[type='checkbox'] {
+  padding-right: 40px;
+}
 .order-submission button {
   margin-left: 15px;
   margin-right: 15px;
 }
 .order-submission .place-order {
+  margin-left: 30px;
   color: #ffffff;
   font-weight: bold;
   background-color: #5fcac6;
