@@ -1,3 +1,7 @@
+@basic-background-color: rgb(236,238,244);
+@basic-font-color: rgb(114,120,149);
+@urgency-color : rgb(237,190,118);
+
 html
 {
     font-family: sans-serif;
@@ -10,13 +14,13 @@ header
     align-items:center;
     font-family: sans-serif;
     
-    background-color:  rgb(236,238,244);
+    background-color:  @basic-background-color;
     
     a{
         &, &:active , &:visited
         {
            text-decoration: none;
-            color:#a5abc5;
+           color:#a5abc5;
         }
     }
 }  
@@ -31,11 +35,11 @@ header
 }
 main
 {
-    background-color: rgb(236,238,244);
+    background-color: @basic-background-color;
 
     form 
     {
-        border:50px solid rgb(236,238,244);/*LOOOL 50px but anyway =(*/
+        border:50px solid @basic-background-color;/*LOOOL 50px but anyway =(*/
         background-color: rgb(255,255,255);
         display: flex;
         flex-direction:column;
@@ -49,8 +53,9 @@ main
 .button-as-a
 {
     width: 200px;
-    background-color: rgb(236,238,244);
-    border: 1px solid #6e768f;
+    background-color: @basic-background-color;
+    border: 1px solid;
+    border-color: @basic-font-color;
     border-radius: 5px;
     color:#a5abc5;
     padding: 15px;
@@ -72,14 +77,14 @@ main
     margin-top:15px;
     margin-bottom: 15px;
     font-size: 150%;
-    color: #6e768f;
+    color: @basic-font-color;
 }
 
 .circled-header
 {
     margin-right: 30px;
     border-radius: 50%;
-    border:2px solid #6e768f;
+    border:2px solid @basic-font-color;
     width:70px;
     height: 70px;
     text-align:center;
@@ -171,7 +176,7 @@ button,select
         margin-left: 30px;
         margin-top: 20px;
         margin-bottom: 5px;
-        
+        vertical-align: top;
         h1 
         {
             margin-left: 15px;
@@ -227,75 +232,90 @@ button,select
     }
     .urgency-set
     {
-       /* input[type=range]
+        margin-left: 20px;
+        .urgency-input
         {
-            
-            top: 50%;
-            left: 50%;
-            margin: -2.25em -17.75em;
-            width: 35.5em;
-            height: 4.5em;
-            background: none;
-            font: 1em;
-            cursor: pointer;
-            &, &::-webkit-slider-runnable-track, &::-webkit-slider-thumb {
-              -webkit-appearance: none;
-            }
-            &::-webkit-slider-runnable-track {
-              width: 35.5em;
-              height: 2.25em;
-              border-radius: .5em;
-              box-shadow: inset 0 0 0 0.25em #aaa;
-              background: linear-gradient(90deg, #fffc42, #ef230f);
-            }
-            &::-moz-range-track {
-              width: 35.5em;
-              height: 2.25em;
-              border-radius: .5em;
-              box-shadow: inset 0 0 0 0.25em #aaa;
-              background: linear-gradient(90deg, #fffc42, #ef230f);
-            }
-            &::-ms-track {
-              border: none;
-              width: 35.5em;
-              height: 2.25em;
-              border-radius: .5em;
-              box-shadow: inset 0 0 0 0.25em #aaa;
-              background: linear-gradient(90deg, #fffc42, #ef230f);
-              color: transparent;
-            }
-            &::-ms-fill-lower, &::-ms-tooltip {
-              display: none;
-            }
+            margin-left: 30px;
+            width:  300px;
             &::-webkit-slider-thumb {
-              margin-top: -0.625em;
-              border: none;
-              width: 3.5em;
-              height: 3.5em;
-              border-radius: .5em;
-              box-shadow: inset 0 0 0 0.25em #aaa, 0 0 0.5em #000, 0 0 1em #333;
-              background: linear-gradient(#fcfcfc, #d6d6d6);
-              cursor: ew-resize;
+                  -webkit-appearance: none;
+                  height: 20px;
+                  width: 20px;
+                  margin-top: 1em;
+                  border-radius: 50%;
+                  background: @urgency-color;
+                  cursor: pointer;
+                  margin-top: 0px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
             }
             &::-moz-range-thumb {
-              border: none;
-              width: 3.5em;
-              height: 3.5em;
-              border-radius: .5em;
-              box-shadow: inset 0 0 0 0.25em #aaa, 0 0 0.5em #000, 0 0 1em #333;
-              background: linear-gradient(#fcfcfc, #d6d6d6);
-              cursor: ew-resize;
+              height: 20px;
+              margin-top: 0.1875em;
+              width: 20px;
+              border-radius: 50%;
+              background: @urgency-color;
+              cursor: pointer;
             }
             &::-ms-thumb {
-              border: none;
-              width: 3.5em;
-              height: 3.5em;
-              border-radius: .5em;
-              box-shadow: inset 0 0 0 0.25em #aaa, 0 0 0.5em #000, 0 0 1em #333;
-              background: linear-gradient(#fcfcfc, #d6d6d6);
-              cursor: ew-resize;
+              height: 20px;
+              width: 20px;
+              margin-top: 0.1875em;
+              border-radius: 50%;
+              background: @urgency-color;
+              cursor: pointer;
             }
-        }*/
+            &::-webkit-slider-runnable-track{
+                height:20px;
+                margin-top: 0px;
+                width:100%;
+                background-color:@basic-background-color;
+                border-radius: 10px;
+            }
+            &::-moz-range-track{
+                height:20px;
+                width:100%;
+                background-color:@basic-background-color;
+                border-radius: 10px;
+               
+            }
+            &::-ms-track{
+                height:20px;
+                width:100%;
+                background-color:@basic-background-color;
+                border-radius: 10px;
+            }
+            
+        }
+       width: 50%;
+       
+       h1
+       {
+           margin-top: 0px;
+       }
+       .urgency-description
+       {
+           h1
+           {
+               margin-top: 10px;
+               font-size: bold;
+               font-weight: bold;
+               text-transform: uppercase;
+           }
+           .urgency-value 
+           {
+               font-size: bold;
+               color:@urgency-color;
+           }
+           p {
+               
+               padding: 40px;
+               padding-top: 20px;
+           }
+           border-radius: 5px;
+           border:1px solid @basic-font-color;
+           margin-top:30px;
+           
+           
+       }
     }
 }
 .custom-radio-input-span
@@ -366,7 +386,52 @@ button,select
     }
 }
 
-
+.payment-set
+{
+    p{
+        margin-left: 4em;
+        margin-top: 2em;
+        a{
+            color: @basic-font-color;
+        }
+    }
+    
+    label
+    {
+        display: inline-block;
+        text-transform: uppercase;
+        margin-left: 15px;
+        margin-top: 30px;
+    }
+    .radio-wrapper
+    {
+        margin-left: 30px;
+        margin-top:  50px;
+    }
+    input
+    {
+        font-family: sans-serif;
+        font-size: 24px;
+        border-radius: 5px;
+        border:2px solid @basic-background-color;
+        outline:none;
+        &:valid
+        {
+            &&::after
+            {
+                font-family: kotofont;
+                color: rgb(118,167,225);
+                content: '\e822';
+                font-size: large;
+                margin-left: -20px;
+            }
+            
+        }
+        &:invalid
+        {
+        }
+    }
+}
 .order-submission
 {
     margin-top: 20px;
@@ -393,7 +458,7 @@ button,select
 }
 footer
 {
-    background-color: rgb(236,238,244);
+    background-color: @basic-background-color;
 }
 
 .footer-content 
@@ -431,3 +496,5 @@ footer
     }
 }
 
+
+ 
