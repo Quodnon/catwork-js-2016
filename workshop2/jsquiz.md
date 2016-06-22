@@ -20,3 +20,29 @@ var x = 1;
   x;
   
 ````
+
+
+
+==============
+[quiz 1](http://davidshariff.com/js-quiz/)
+[quiz 2](http://perfectionkills.com/javascript-quiz/)
+[quiz 2](http://perfectionkills.com/javascript-quiz-es6/)
+
+
+
+#WTF
+
+(function() {
+  return [
+    (() => this.x).bind({ x: 'inner' })(),
+    (() => this.x)()
+  ]
+}).call({ x: 'outer' });
+
+
+#deep assign part
+
+//map set date regexp
+new from.constructor(from)
+
+//new from.constructor()

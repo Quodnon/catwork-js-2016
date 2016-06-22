@@ -1,0 +1,16 @@
+{
+  "name": "test-learn",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "./add.js",
+  "scripts": {
+    "test": "mocha -w test"
+  },
+  "author": "quodnon",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "*",
+    "mocha": "*",
+    "sinon": "*"
+  }
+}
