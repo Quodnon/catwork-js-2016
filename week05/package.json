@@ -4,7 +4,7 @@
   "description": "test",
   "main": "./add.js",
   "scripts": {
-    "test": "mocha -w tests/test"
+    "test": "mocha -w ./test"
   },
   "author": "quodnon",
   "license": "MIT",

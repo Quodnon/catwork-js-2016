@@ -1,0 +1,11 @@
+{
+  "name": "code-kata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "../add.js",
+  "scripts": {
+    "test": "mocha -w tests/test"
+  },
+  "author": "quodnon",
+  "license": "MIT"
+}

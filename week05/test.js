@@ -2,7 +2,7 @@
 
 require("chai").should()
 
-const {main} =require("../package")
+const main =require("./package").main
 
 const add = require(main)
 
