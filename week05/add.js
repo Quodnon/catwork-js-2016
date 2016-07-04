@@ -3,7 +3,7 @@
 
 const add = strings=>{
     if (strings=="") return 0;
-    let array =strings.match(/^//(.+)\\n/,'g')
+    let array =strings.match(/^(.+)\\n/g)
     
     if (array)
     {

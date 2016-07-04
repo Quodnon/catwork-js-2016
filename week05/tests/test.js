@@ -2,7 +2,7 @@
 
 require("chai").should()
 
-const {main} =require("./package")
+const {main} =require("../package")
 
 const add = require(main)
 
@@ -33,11 +33,6 @@ describe("add",()=>{
         add('//;\n1;2;3').should.equal(6)
         add('//*\n1*2*5').should.equal(7)
     })
-
-    
-    
-    
-    
-    
+ 
     
 })
