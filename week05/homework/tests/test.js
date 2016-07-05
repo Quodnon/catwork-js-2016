@@ -38,4 +38,12 @@ describe('add',()=>{
     it('should throw exception on negative',()=>{
        (()=>{ add('-2,3')}).should.throw('negatives not allowed!')
     })
+    
+    it('should miss larger than 1000',()=>{
+        add('1001,1').should.equal(1)
+    })
+    
+     it('should take any delim length with the following format://[delimiter]\n',()=>{
+        add('//[***]\n1***2***3').should.equal(1)
+    })
 }) 
