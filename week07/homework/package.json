@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start":"nvm use v6.2.0; node .",
+    "start":"node .",
     "prestart": "supervisor -RV index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
