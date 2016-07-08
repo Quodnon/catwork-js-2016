@@ -6,7 +6,13 @@ const {host,port} = require("config")
 
 let app = new App();
 
-app.use((x,y)=>{console.log('hello')});
-app.use((x,y)=>{console.log('goodbye')});
+app.use((req, res)  => {
+  console.log("url", req.url); 
+  console.log("method", req.method); 
+})
+app.use((req, res) => {
+  console.log(req.headers); 
+  res.end("Hello World");
+})
 
 app.start(host,port, () => console.log("listening on " + port));

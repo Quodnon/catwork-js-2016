@@ -6,16 +6,24 @@ class App {
     }
     
     use (fun){
-        this.funnyArray.push(fun)
-    }
-    run (args){
-        args.map((argument)=>{
-            argument()
+        this.funnyArray.push((err,req,res)=>{
+          try{
+              fun(req,res);
+              
+            } catch (e){
+                throw e;
+            }
         })
     }
+    
+    run (host,port){
+        let server= http.createServer(this.funnyArray.shift());
+        server.listen(port,host);
+    }
+    
     start(host,port,fun){
         this.use(fun);
-        this.run(this.funnyArray)
+        this.run(host,port)
     }
 }
 
