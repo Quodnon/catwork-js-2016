@@ -1,14 +1,17 @@
 {
   "name": "app-use",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
+    "start":"node .",
+    "prestart": "supervisor -RV index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "quodnon",
   "license": "MIT",
   "dependencies": {
-    "config": "^1.21.0"
-  }
+    "config": "^1.21.0",
+    "node-supervisor": "^1.0.2"
+  },
+  "description": ""
 }
