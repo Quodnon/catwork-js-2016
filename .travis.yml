@@ -5,4 +5,4 @@ node_js:
   - "6.2.0"
 
 script:
-  cd week05/homework && npm install mocha chai --save && chmod 0777 node_modules/mocha/bin/mocha && mocha -w tests/test.js
+  cd week05/homework && npm install mocha chai --save && chmod 0777 node_modules/mocha/bin/mocha && mocha -w  -t 20000 tests/test.js 
