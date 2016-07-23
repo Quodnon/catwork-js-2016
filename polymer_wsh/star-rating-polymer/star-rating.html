@@ -1,5 +1,7 @@
-<template id='star-rating-template'>
-            <style>
+<link rel="import" href="bower_components/polymer/polymer.html">
+<dom-module id="star-rating">
+  <template>
+    <style>
          :host {
            display: flex;
            align-items: center;
@@ -9,8 +11,8 @@
 
          .star {
             display: inline-block;
-            height: 36px;
-            width: 36px;
+            height:var(--star-size, 36px);
+            width: var(--star-size, 36px);
             cursor: pointer;
             background: rgba(255,255,255,0) url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjQ0NDQ0NDIiBoZWlnaHQ9IjE4IiB2aWV3Qm94PSIwIDAgMTggMTgiIHdpZHRoPSIxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05IDExLjNsMy43MSAyLjctMS40Mi00LjM2TDE1IDdoLTQuNTVMOSAyLjUgNy41NSA3SDNsMy43MSAyLjY0TDUuMjkgMTR6Ii8+CiAgICA8cGF0aCBkPSJNMCAwaDE4djE4SDB6IiBmaWxsPSJub25lIi8+Cjwvc3ZnPg==) no-repeat center center;
             background-size: cover;
@@ -26,47 +28,36 @@
       <div class="star"></div>
       <div class="star"></div>
       <div class="star"></div>
-        </template>
-<script type="text/javascript">
-    
-  const localDocument = document.currentScript.ownerDocument;
-
-  class StarRating extends HTMLElement {
-    attachedCallback() {
-      this._root = this.createShadowRoot();
-      const templateEl = localDocument.querySelector('#star-rating-template');
-      const clone = document.importNode(templateEl.content,true)
-      this._root.appendChild(clone);
-
-      this._stars = Array.from(this._root.querySelectorAll('.star'));
-
-      this._toggleSelection();
-
-      this._applyDOMEvents();
-    }
-
-    _toggleSelection() {
-      this._stars.forEach((item, index) => {
-        const method = index < this.getAttribute('value')
+  </template>
+  <script type="text/javascript">
+    Polymer({
+      is:'star-rating',
+      properties:{
+        value :Number,
+        observer:'_toggleSelection'
+      },
+      attached(){
+        this._stars = Polymer.dom(this.root).querySelectorAll('.star');
+        this._toggleSelection(this.value);
+        this._applyDOMEvents();
+      },
+      _toggleSelection(val) {
+        if (this._stars){
+          this._stars.forEach((item, index) => {
+            const method = index < val
             ? 'add' : 'remove';
-        item.classList[method]('selected');
-      });
-    }
-
-    _applyDOMEvents() {
-      this._stars.forEach((item, index) => {
-        item.addEventListener('click', () => {
-          this.setAttribute('value', index + 1);
-        })
-      });
-    }
-
-    attributeChangedCallback(name, oldVal, newVal) {
-      if (name === 'value') {
-        this._toggleSelection();
-      }
-    }
-  }
-
-  document.registerElement('star-rating', StarRating);
-</script>
+          item.classList[method]('selected');
+          })
+        }
+      },
+      
+      _applyDOMEvents() {
+        this._stars.forEach((item, index) => {
+          item.addEventListener('click', () => {
+            this.value= index + 1;
+          })
+        });
+        }
+    })
+  </script>
+</dom-module>

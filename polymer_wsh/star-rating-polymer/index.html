@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="import" href="star-rating.html">
+        <style is="custom-style">
+            star-rating{
+                --star-size:60px;
+            }
+        </style>
+    </head>
+    <body>
+        <star-rating value="2"></star-rating>
+        <star-rating value="2"></star-rating>
+        <star-rating value="5"></star-rating>
+        <star-rating value="2"></star-rating>
+    </body>
+    <script type="text/javascript">
+    const el =document.querySelector('star-rating');
+    el.addEventListener('value-changed',ev=>{
+        debugger;
+        console.log('changed',ev,ev.detail.value)
+    })
+    </script>
+</html>
